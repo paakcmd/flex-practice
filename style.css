@@ -1,0 +1,54 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap:wrap; //new line elements when it reaches max width;
+  flex-flow: column;
+  justify-content: center;
+  height:100vh;
+  //justify-content affect main-axis;
+  //align-items affects cross-axis
+  //when flex-flow = row -> main = horizon, cross = vertical when flex-flow = column -> vice versa
+
+}
+
+.box {
+  height: 100px;
+  flex-basis:200px; // equals to min-width:200px but if smaller than 200 will force scroll bar unlike flex-basis;
+
+  /* flex: 1 0 200px; -> flex glow 1, flex shrink 0, flex basis 200  */
+}
+
+.one {
+  background: red;
+  order: 3;
+  /* flex-grow:1;
+  flex-shrink: 1; */
+}
+
+.two {
+  background: blue;
+  order:1;
+  /* flex-grow:2;
+  flex-shrink: 2; */
+}
+
+.three {
+  background: green;
+  order:2;
+  /* flex-grow:1;
+  flex-shrink: 1; */
+}
